@@ -1,6 +1,8 @@
-# wiki-api
+# wiki-pdf
 
-TODO: Write a description here
+Currently WIP
+
+Starting out as just downloading Wikipedia articles as PDFs, but going to figure a way to make a client for the Wikimedia API (which may or may not turn into a separate repo).
 
 ## Installation
 
@@ -16,7 +18,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/wiki-api/fork>)
+1. Fork it (<https://github.com/materialfuture/wiki-api/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -24,4 +26,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [Konstantine](https://github.com/your-github-user) - creator and maintainer
+- [MaterialFuture](https://github.com/materialfuture) - creator and maintainer
