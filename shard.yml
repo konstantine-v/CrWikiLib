@@ -1,0 +1,13 @@
+name: wiki-api
+version: 0.1.0
+
+authors:
+  - Konstantine <konstantinev@protonmail.com>
+
+targets:
+  wiki-api:
+    main: src/wiki-api.cr
+
+crystal: 0.32.1
+
+license: MIT
