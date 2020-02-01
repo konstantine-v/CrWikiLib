@@ -27,3 +27,14 @@ TODO: Write development instructions here
 ## Contributors
 
 - [MaterialFuture](https://github.com/materialfuture) - creator and maintainer
+
+
+## Notes
+
+- Example PDF Request to Rest API: <https://en.wikipedia.org/api/rest_v1/page/pdf/Rust_(programming_language)>
+
+#### TODO
+
+- Break out API things, add more features??
+- Look into adding Admiral Shard
+- Look into adding functionality for reading txt file for bulk downloads
