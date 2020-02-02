@@ -1,8 +1,8 @@
-# wiki-pdf
+# Wiki::Library
 
 Currently WIP
 
-Starting out as just downloading Wikipedia articles as PDFs, but going to figure a way to make a client for the Wikimedia API (which may or may not turn into a separate repo).
+I wrapper for the Wikipedia and Wikimedia API to get commonly used things
 
 ## Installation
 
@@ -35,6 +35,6 @@ TODO: Write development instructions here
 
 #### TODO
 
-- Break out API things, add more features??
 - Look into adding Admiral Shard
-- Look into adding functionality for reading txt file for bulk downloads
+- Look into adding functionality for reading txt file for bulk downloads for PDFs
+- Breakout URLs for so they're more reusable
