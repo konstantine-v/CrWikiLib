@@ -1,11 +1,9 @@
 require "../src/wiki-api"
 
-# Example of the PDF class being used
-
-protocol = "https"
-
-#Get reponse
-response = Wiki::PDF.new(protocol, "Crystal_(programming_language)")
+proto = "https"
+query = "Crystal_(programming_language)" #Parse query and make what the API want's
 
 # Download the PDF (in current directory)
-File.write("somefile.pdf", response.body)
+File.write("#{query}.pdf", Wiki::Page.pdf(proto, query).body)
+
+#Todo: will soon be made to read a list in a txt file
