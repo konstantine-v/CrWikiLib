@@ -2,7 +2,10 @@ require "../src/wiki-api"
 
 # Example of the PDF class being used
 
-#Get reponse
-response = Wiki::PDF.new(@@proto_url, "Rust_(programming_language)")
+protocol = "https"
 
+#Get reponse
+response = Wiki::PDF.new(protocol, "Rust_(programming_language)")
+
+# Download the PDF (in current directory)
 File.write("somefile.pdf", response.body)
