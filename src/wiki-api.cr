@@ -5,7 +5,9 @@ require "./wiki-api/exceptions/**"
 
 module Wiki
   VERSION = "0.1.0"
-  URL   = "en.wikipedia.org"
+  LANG    = "en"
+  URL     = "#{Wiki::LANG}.wikipedia.org"
+  API_URL = "#{Wiki::URL}/w/api.php"
 
   # Wiki::PDF.new(@@proto_url, @@base_url, "Rust_(programming_language)")
 
