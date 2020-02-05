@@ -1,20 +1,17 @@
 class Wiki::POTD
-  @@path_url   = "wiki/Template:POTD_protected"
+  @@path_url   = "Template:POTD_protected"
 
   def self.new(proto : String, date : String)
-    response = HTTP::Client.get("#{proto}://#{Wiki::URL}/#{@@path_url}/#{date}")
-
-    # Raise Exception if something goes wrong, duh 
+    params = {
+      "format"        => ["json"],
+      "action"        => ["query"],
+      "formatversion" => ["2"],
+      "prop"          => ["images"],
+      "titles"        => ["#{@@path_url}/#{date}"],
+    }
+    req_params = HTTP::Params.new(params)
+    response = HTTP::Client.get("#{proto}://#{Wiki::API_URL}?#{req_params}")
     raise Exceptions::Generic.new("Something went wrong") unless response.success?
-
     return response.body
   end
-
-  def self.html(proto : String, url : String, date : String)
-    response = HTTP::Client.get("#{proto}://#{url}/#{@@path_url}/#{date}")
-    raise Exceptions::Generic.new("Something went wrong") unless response.success?
-    return response.body
-  end
-
-  # Todo: Get image just the image by using JSON or parse the HTML using XML::parse
 end
