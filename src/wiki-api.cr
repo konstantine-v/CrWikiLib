@@ -4,7 +4,7 @@ require "./wiki-api/**"
 require "./wiki-api/exceptions/**"
 
 module Wiki
-  VERSION = "0.1.2"
+  VERSION = "0.1.3"
   LANG    = "en"
   URL     = "#{Wiki::LANG}.wikipedia.org"
   API_URL = "#{Wiki::URL}/w/api.php"

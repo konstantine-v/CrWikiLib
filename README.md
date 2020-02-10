@@ -1,19 +1,35 @@
 # Wiki::Library
+Currently WIP, but this project works. 
 
-Currently WIP
+I wrapper for the Wikipedia and Wikimedia API to get commonly used things.
 
-I wrapper for the Wikipedia and Wikimedia API to get commonly used things
+It's constantly changing, but my main focus is working on new features and making QOL changes to make it nicer to work with.
 
 ## Installation
 
 TODO: Write installation instructions here
 
 ## Usage
+Refer to `examples/` directory for examples of use.
 
-TODO: Write usage instructions here
+To get the page in a data format use the following:
+```Ruby
+puts Wiki::Page.new("https", "Crystal_(programming_language)", "json")
+```
+
+To get the page as a PDF for download use the following:
+```Ruby
+puts Wiki::Page.pdf("https", "Crystal_(programming_language)")
+```
+
+To get the Post of the Day use the following code: (date in ISO format)
+```Ruby
+Wiki::POTD.new("HTTPS", potd_date, "json")
+```
+
+I made it so you can specify protocol, that way if you're not required HTTP or HTTPS, you dsecide.
 
 ## Development
-
 TODO: Write development instructions here
 
 ## Contributing
