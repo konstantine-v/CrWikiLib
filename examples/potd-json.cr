@@ -2,6 +2,7 @@ require "../src/wiki-api"
 
 # This is for getting the Picture of the day
 
+# Set the protocol
 protocol = "https"
 
 # Format local time to proper time the API accepts, plus convert to string

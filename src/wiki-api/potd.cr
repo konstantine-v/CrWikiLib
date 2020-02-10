@@ -14,4 +14,11 @@ class Wiki::POTD
     raise Exceptions::Generic.new("Something went wrong") unless response.success?
     return response.body
   end
+
+  def self.html(proto : String, date : String)
+    response = HTTP::Client.get("#{proto}://#{Wiki::HTML_URL}/#{@@path_url}/#{date}")
+    raise Exceptions::Generic.new("Something went wrong") unless response.success?
+    return response.body
+  end
+
 end
