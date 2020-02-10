@@ -1,9 +1,10 @@
 class Wiki::POTD
   @@path_url   = "Template:POTD_protected"
-
-  def self.new(proto : String, date : String)
+  
+  # Format is based on the formats in https://meta.wikimedia.org/w/api.php, formats available are XML, JSON, PHP, Rawfm, etc.
+  def self.new(proto : String, date : String, format : String)
     params = {
-      "format"        => ["json"],
+      "format"        => [format],
       "action"        => ["query"],
       "formatversion" => ["2"],
       "prop"          => ["images"],

@@ -11,7 +11,3 @@ module Wiki
   HTML_URL = "#{Wiki::URL}/wiki"
 
 end
-
-
-
-

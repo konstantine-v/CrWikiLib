@@ -1,7 +1,8 @@
 class Wiki::Page
-  def self.new(proto : String, query : String)
+  # Format is based on the formats in https://meta.wikimedia.org/w/api.php, formats available are XML, JSON, PHP, Rawfm, etc.
+  def self.new(proto : String, query : String, format : String)
     params = {
-      "format"    => ["json"],
+      "format"    => [format],
       "action"    => ["query"],
       "prop"      => ["extracts"],
       "redirects" => ["1"],
@@ -21,4 +22,5 @@ class Wiki::Page
     raise Exceptions::Generic.new("Something went wrong") unless response.success?
     return response
   end
+
 end

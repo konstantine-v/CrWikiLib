@@ -20,4 +20,5 @@ potd_date  =  date_y + "-" +date_m + "-" +date_d
 
 # Returns the html for POTD
 # All that's needed is the protocol and date, both in string format
-puts Wiki::POTD.new(protocol, potd_date)
+puts Wiki::POTD.new(protocol, potd_date, "json")
+# Format is based on the formats in https://meta.wikimedia.org/w/api.php, formats available are XML, JSON, PHP, Rawfm, etc.
