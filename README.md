@@ -6,8 +6,13 @@ I wrapper for the Wikipedia and Wikimedia API to get commonly used things.
 It's constantly changing, but my main focus is working on new features and making QOL changes to make it nicer to work with.
 
 ## Installation
-
-TODO: Write installation instructions here
+Install as a shard by including in your `shards.yml`
+```crystal
+dependencies:
+  crwikilib:
+    github: MaterialFuture/CrWikiLib
+```
+After adding remember to run `shards` to install and be able to use in your project
 
 ## Usage
 Refer to `examples/` directory for examples of use.
